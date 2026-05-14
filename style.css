@@ -1,3 +1,10 @@
 body{
-    background-color: rgb(137, 255, 216);
+    background: linear-gradient(
+        135deg,
+        #050816,
+        #0B1023,
+        #111827
+    );
+
+    color: white;
 }
