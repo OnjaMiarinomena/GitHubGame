@@ -136,3 +136,25 @@ h2{
     padding: 10px 20px;
     border-radius: 7px;
 }
+/*les outils preincipales*/
+.principal{
+    position: absolute;
+    top: 13%;
+    left: 15%;
+    width: 84%;
+}
+.forsection{
+    display: flex;
+    justify-content: space-between;
+    
+}
+section{
+    background: rgba(11, 19, 38, 0.6);
+    border-radius: 12px;
+    box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
+    width: 48%;
+    padding: 30px;
+    margin: 10px;
+    margin-top: 5px;
+    text-align: center;
+}
