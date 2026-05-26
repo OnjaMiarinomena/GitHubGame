@@ -1,96 +1,137 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Room Manager</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body>
-    <div class="parent">
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <div class="sidebar">
-            <div class="logo">
-                <h2>  GameRoom</h2>
-                <span>Manager <i class="fa-solid fa-gamepad text-yellow-500 font-3xl"></i> </span>
-            </div>
-            <ul class="menu">
-                <li>
-                    <a href="#"> <i class="fa-solid fa-house"></i> Tableau de bord</a>
-                </li>
-                <li>
-                    <a href="#"> <i class="fa-solid fa-clock"></i> Sessions en cours</a>
-                </li>
-                <li>
-                    <a href="#"> <i class="fa-solid fa-gamepad"></i> Machines</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-users"></i>Clients</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-calendar"></i>Réservation</a>
-                </li>
-                <li>
-                    <a href="#"><i class="fa-solid fa-wallet"></i>Paiement</a>
-                </li>
-                <li>
-                    <a href="#"> <i class="fa-solid fa-tags"></i>Tarifs</a>
-                </li>
-                <li>    
-                    <a href="#"><i class="fa-solid fa-chart-line"></i>Rapports</a>
-                </li>
-                <li>
-                    <a href="#"> <i class="fa-solid fa-envelope"></i>Message</a>
-                </li>
-                <li>
-                    <a href="#"><i class=" fa-solid fa-gear"></i>Parametres</a>
-                </li>
-            </ul>
+    <title>GameRoom Manager</title>
 
+    <link rel="stylesheet" href="style.css" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+  </head>
+
+  <body>
+    <!-- OVERLAY -->
+
+    <div class="overlay"></div>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+      <div class="logo">
+        <i class="fa-solid fa-gamepad"></i>
+
+        <div>
+          <h2>GAME ROOM</h2>
+          <span>MANAGER</span>
         </div>
-        <div class="topbar">
-            <div>
-                <h2>Bonjour Gerant !</h2>
-                <p class="Bonjour-gerant">Voici un aperçu de votre interface de aujourd'hui.</p>
+      </div>
+
+      <ul class="nav-links">
+        <li><a href="#" class="active">Accueil</a></li>
+
+        <li><a href="#">Fonctionnalités</a></li>
+
+        <li><a href="#">Tarifs</a></li>
+
+        <li><a href="#">À propos</a></li>
+
+        <li><a href="#">Contact</a></li>
+      </ul>
+
+      <div class="connexion-container">
+        <button class="connexion-btn">
+          <i class="fa-solid fa-user"></i>
+
+          Connexion
+
+          <i class="fa-solid fa-chevron-down"></i>
+        </button>
+
+        <!-- POPUP -->
+
+        <div class="popup">
+          <h2>Connexion rapide</h2>
+
+          <p>Accédez à votre espace</p>
+
+          <div class="roles">
+            <div class="role-card active-role">
+              <i class="fa-solid fa-gamepad"></i>
+
+              <h3>Gamer</h3>
+
+              <span>Client</span>
             </div>
 
-            <div class="deconnect">
-                <p><i class="fa-solid fa-bell"></i> </p>
-                <p class="ending-day">Fin de la journée    <i class="fa-solid fa-sign-out-alt"></i> </p>
-            </div>
-            
-        </div>
-        <div class="principal">
-            <div class="forsection">
-                <section>
-                    <h3>Machines disponibles</h3>
-                    <p>8</p>
-                    <p>Sur 20 machines</p>
-                </section>
-                <section>
-                    <h3>Sessions en cours</h3>
-                    <p>5</p>
-                    <p>Voir les session</p>
-                </section>
-                <section>
-                    <h3>Clients présents</h3>
-                    <p>12</p>
-                    <p>Voir les clients</p>
-                </section>
-                <section>
-                    <h3>Revenus du jour</h3>
-                    <p>1500 Ar</p>
-                    <p>Voir les rapports</p>
-                </section>
-            </div>
-        </div>
-        
-         
-    </div>
-   
+            <div class="role-card">
+              <i class="fa-solid fa-briefcase"></i>
 
-    
-</body>
+              <h3>Gérant</h3>
+
+              <span>Gestion</span>
+            </div>
+
+            <div class="role-card">
+              <i class="fa-solid fa-shield"></i>
+
+              <h3>Admin</h3>
+
+              <span>Administration</span>
+            </div>
+          </div>
+
+          <form>
+            <div class="input-box">
+              <i class="fa-solid fa-envelope"></i>
+
+              <input type="text" placeholder="Email ou nom d'utilisateur" />
+            </div>
+
+            <div class="input-box">
+              <i class="fa-solid fa-lock"></i>
+
+              <input type="password" placeholder="Mot de passe" />
+            </div>
+
+            <button class="login-btn">Se connecter</button>
+          </form>
+        </div>
+      </div>
+    </nav>
+
+    <!-- HERO -->
+
+    <section class="hero">
+      <div class="hero-left">
+        <span class="badge"> Bienvenue sur GameRoom Manager </span>
+
+        <h1>
+          Gérez votre salle gaming
+          <span>comme un vrai pro</span>
+        </h1>
+
+        <p>
+          Gérez vos machines, vos sessions, vos réservations et vos paiements
+          dans une plateforme moderne et intuitive.
+        </p>
+
+        <div class="hero-buttons">
+          <button class="start-btn">Commencer maintenant</button>
+
+          <button class="demo-btn">
+            <i class="fa-solid fa-play"></i>
+
+            Voir la démo
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
 </html>

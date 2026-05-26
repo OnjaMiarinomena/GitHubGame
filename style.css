@@ -1,160 +1,78 @@
-body{
-    background: linear-gradient(
-        120deg,
-        #050816,
-        #131e4b,
-        #11151e
-    );
-
-    color: white;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "arial", helvetica, sans-serif;
 }
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
-
-}
-.parent{
-    display: flex;
+body {
+  background-image: url("assets/image/index3.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #fff;
 }
 
-/* Sidebare a gauche*/
-h2{
-    color: #a4b3f7;
+/*overplay*/
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(139, 92, 246, 0.25)),
+    transparent 40%;
+  z-index: -1;
 }
-.Bonjour-gerant{
-    padding-top: 10px;
-    color: #ffffff;
-    font-weight: 500;
+
+/* navbar*/
+.navbar {
+  width: 100%;
+  margin: 20px auto;
+  padding: 18px 35px;
+  background: rgba(5, 8, 22, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
 }
-.sidebar{
-    width: 300px;
-    height: 100%;
-    background-color: rgba(11, 19, 38, 0.6);
-    border-right: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 25px;
-    position: fixe;
-    top: 0;
-    left: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
-}
+
 /*logo*/
-.logo{
-    margin-bottom: 40px;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
 }
-.logo h2{
-    color: #a4b3f7;
-    font-size: 32px;
-    font-weight: bold;
-    margin-bottom: 30px;
+.logo i {
+  font-size: 45px;
+  color: #8b5cf6;
 }
-.logo span{
-    color: #BB5CF6;
-    font-size: 27px;
-    margin-bottom: 30px;
+.logo h2 {
+  font-size: 32px;
 }
-/*Menu*/
-.menu{
-    list-style: none;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-
-}
-.menu li a{
-    display: block;
-    text-decoration: none;
-    font-weight: bold;
-    color: #CBD5E1;
-    padding: 19px 18px;
-    border-radius: 12px;
-    transition: 0.5s;
-}
-/*hover*/
-.menu li a:hover{
-    background: rgba(139, 92, 246, 0.4);
-    color: white;
-    font-weight: bold;
-    box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
-    transition: 0.9s;
-}
-.menu li:first-child a{
-    background: linear-gradient(90deg, #8B5CF6, #6366F1);
-    color: white;
-    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
-}
-/*logout*/
-.logout a{
-    display: block;
-    text-decoration: none;
-    text-align: center;
-    padding: 14px;
-    border-radius: 12px;
-    background: rgba(239, 68, 68, 0.15);
-    color: white;
-    transition: 0.3s;
-}
-.logout a:hover{
-    background: rgba(239, 68, 68, 0.8);
-    color: white;
+.logo span {
+  color: #8b5cf6;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
-.menu a i{
-    margin-right: 11px;
-}
-/*dashboard*/
-.topbar{
-    background: rgba(11, 19, 38, 0.6);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
-    width: 100%;
-    height: 100px;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+/*LINKS*/
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
 }
 
-.deconnect{
-    display: flex;
-    justify-content: space-between;
-    padding:  20px 20px;
+.nav-links a {
+  text-decoration: none;
+  color: #e2e8f0;
+  transition: 0.3s;
+}
+.nav-links a:hover,
+.active {
+  color: #8b5cf6;
+}
 
-}
-.ending-day{
-        background: linear-gradient(
-        120deg,
-        #424659,
-        #131e4b,
-        #444c60
-    );
-    padding: 10px 20px;
-    border-radius: 7px;
-}
-/*les outils preincipales*/
-.principal{
-    position: absolute;
-    top: 13%;
-    left: 15%;
-    width: 84%;
-}
-.forsection{
-    display: flex;
-    justify-content: space-between;
-    
-}
-section{
-    background: rgba(11, 19, 38, 0.6);
-    border-radius: 12px;
-    box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
-    width: 48%;
-    padding: 30px;
-    margin: 10px;
-    margin-top: 5px;
-    text-align: center;
-}
+/*BOUTTON*/
