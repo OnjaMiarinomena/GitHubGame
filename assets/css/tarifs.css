@@ -28,7 +28,7 @@ h2 {
   background-color: rgba(11, 19, 38, 0.6);
   border-right: 1px solid rgba(255, 255, 255, 0.1);
   padding: 25px;
-  position: fixe;
+  position: fixed;
   top: 0;
   left: 0;
   display: flex;
@@ -39,7 +39,34 @@ h2 {
 }
 .main {
   width: 80%;
-  height: 100%;
+  margin-left: 20%;
+  min-height: 100vh;
+  padding: 24px 30px 40px;
+  background: rgba(11, 19, 38, 0.22);
+  border-left: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: inset 0 0 80px rgba(255, 255, 255, 0.03);
+}
+/*logo*/
+.logo {
+  margin-bottom: 40px;
+}
+.logo h2 {
+  color: #a4b3f7;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.logo span {
+  color: #bb5cf6;
+  font-size: 27px;
+  margin-bottom: 30px;
+}
+/*Menu*/
+.menu {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 .menu li a {
   display: block;
@@ -62,6 +89,23 @@ h2 {
   color: white;
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
 }
+.menu a i {
+  margin-right: 11px;
+}
+.logout a {
+  display: block;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px;
+  border-radius: 12px;
+  background: rgba(239, 68, 68, 0.15);
+  color: white;
+  transition: 0.3s;
+}
+.logout a:hover {
+  background: rgba(239, 68, 68, 0.8);
+  color: white;
+}
 /*dashboard*/
 .topbar {
   background: rgba(11, 19, 38, 0.6);
@@ -73,4 +117,151 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  border-radius: 24px;
+  margin-bottom: 1.5rem;
+}
+
+/*ici tous les codes  qui se trouve au cetre d'axe
+*/
+main {
+  background-image: url(../image/fondtarifs.png);
+  padding: 3%;
+  min-height: calc(100vh - 140px);
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+main > div h2 {
+  color: #fff;
+  font-size: 2.6rem;
+  margin-bottom: 0.5rem;
+}
+main > div p {
+  color: #d1d5db;
+  margin-top: 0.5rem;
+}
+main .cards-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+main article {
+  flex: 1 1 300px;
+  min-width: 250px;
+  max-width: 32%;
+  position: relative;
+  background: rgba(11, 19, 38, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 28px;
+  padding: 1.8rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.28);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+main article:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 32px 70px rgba(0, 0, 0, 0.35);
+}
+main article::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 8px;
+  width: 100%;
+  background: var(--card-accent);
+}
+main article h2 {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0.06em;
+  color: #eff6ff;
+}
+main article .price {
+  font-size: 2.7rem;
+  font-weight: 800;
+  margin: 0.25rem 0;
+  color: #fff;
+}
+main article .period {
+  color: #a5b4fc;
+  margin-bottom: 1.4rem;
+}
+main article ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.85rem;
+}
+main article ul li {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.9rem 1rem;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+main article ul li::before {
+  content: "⭐";
+  font-size: 1rem;
+}
+main article button {
+  margin-top: 1.6rem;
+  border: none;
+  padding: 0.95rem 1.4rem;
+  border-radius: 999px;
+  background: #7c3aed;
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+main article button:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+main article.basic {
+  --card-accent: linear-gradient(90deg, #f472b6, #fb7185);
+}
+main article.standard {
+  --card-accent: linear-gradient(90deg, #60a5fa, #818cf8);
+}
+main article.premium {
+  --card-accent: linear-gradient(90deg, #facc15, #fb923c);
+}
+@media (max-width: 1100px) {
+  main article {
+    max-width: 48%;
+  }
+}
+@media (max-width: 720px) {
+  .parent {
+    flex-direction: column;
+  }
+  .sidebar {
+    width: 100%;
+    position: relative;
+  }
+  .main {
+    width: 100%;
+  }
+  main .cards-container {
+    flex-direction: column;
+  }
+  main article {
+    max-width: 100%;
+  }
 }

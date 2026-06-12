@@ -86,6 +86,63 @@
           </div>
         </div>
         <!--ici tous les codes  qui se trouve au cetre d'axe-->
+        <section class="content1 flex items-center justify-between">
+          <div>
+            <h3>Gestion des clients</h3>
+            <p>Consultez et gérez les informations de vos clients.</p>
+          </div>
+          <div><input type="text" placeholder="Rechercher un client..." /></div>
+          <div><button>Ajouter Client</button></div>
+        </section>
+        <section class="content2">
+          <table
+            class="table-auto w-full border-collapse border border-gray-300 mt-4"
+          >
+            <thead
+              class="bg-purple-500 text-white font-bold text-lg border border-gray-300 p-4"
+            >
+              <tr class="border border-gray-300 p-4">
+                <th class="hover:bg-">Nom</th>
+                <th>Email</th>
+                <th>Téléphone</th>
+                <th>Status</th>
+                <th>Actions</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="border border-gray-300 p-4">
+                <td>Jean Dupont</td>
+                <td>jean@gmail.com</td>
+                <td>06 12 34 56 78</td>
+                <td>Actif</td>
+                <td class="flex items-center space-x-2">
+                  <button>Modifier</button>
+                  <button>Supprimer</button>
+                </td>
+              </tr>
+              <tr class="border border-gray-300 p-4">
+                <td>Marie Curie</td>
+                <td>marie@gmail.com</td>
+                <td>06 12 34 56 78</td>
+                <td>Actif</td>
+                <td class="flex items-center space-x-2">
+                  <button>Modifier</button>
+                  <button>Supprimer</button>
+                </td>
+              </tr>
+              <tr>
+                <td>Paul Martin</td>
+                <td>paul@gmail.com</td>
+                <td>06 12 34 56 78</td>
+                <td>Actif</td>
+                <td class="flex items-center space-x-2">
+                  <button>Modifier</button>
+                  <button>Supprimer</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
       </div>
     </div>
   </body>

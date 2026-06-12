@@ -85,7 +85,85 @@
             </p>
           </div>
         </div>
+
         <!--ici tous les codes  qui se trouve au cetre d'axe-->
+        <main>
+          <section>
+            <div>
+              <h3 class="text-xl text-purple-300 font-bold m-2">
+                Gestion de paiment
+              </h3>
+              <p class="m-6">
+                Enregistrez les paiements des clients et consultez les
+                transactions récentes.
+              </p>
+            </div>
+            <div
+              class="flex gap-2 mt-4 justify-between items-center align-items-center"
+            >
+              <article class="threearticle">
+                <h3>450000 Ar</h3>
+                <h4>Total encaissé</h4>
+              </article>
+              <article class="threearticle">
+                <h3>35000 Ar</h3>
+                <h4>Transactions en attente</h4>
+              </article>
+              <article class="threearticle">
+                <h3>500000 Ar</h3>
+                <h4>Total des transactions</h4>
+              </article>
+            </div>
+          </section>
+
+          <section>
+            <div class="flex justify-center gap-8">
+              <input
+                type="text"
+                placeholder="Rechercher un client..."
+                class="bg-black p-2 border rounded"
+              />
+              <button class="search-btn">
+                <i class="fa-solid fa-search"></i>
+              </button>
+              <button>Actualiser</button>
+            </div>
+            <div>
+              <table
+                class="table-auto w-full border-collapse border border-gray-300 mt-4"
+              >
+                <thead>
+                  <tr>
+                    <th>Client</th>
+                    <th>Montant</th>
+                    <th>Date</th>
+                    <th>Statut</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Jean Dupont</td>
+                    <td>15000 Ar</td>
+                    <td>2024-06-01</td>
+                    <td><span class="status completed">Terminé</span></td>
+                  </tr>
+                  <tr>
+                    <td>Marie Curie</td>
+                    <td>20000 Ar</td>
+                    <td>2024-06-02</td>
+                    <td><span class="status pending">En attente</span></td>
+                  </tr>
+                  <tr>
+                    <td>Paul Martin</td>
+                    <td>30000 Ar</td>
+                    <td>2024-06-03</td>
+                    <td><span class="status completed">Terminé</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </section>
+        </main>
       </div>
     </div>
   </body>
