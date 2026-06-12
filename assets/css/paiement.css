@@ -57,7 +57,7 @@ h2 {
   box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
   transition: 0.9s;
 }
-.menu li:nth-child(6) a {
+.menu li:nth-child(5) a {
   background: linear-gradient(90deg, #8b5cf6, #6366f1);
   color: white;
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);

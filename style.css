@@ -303,3 +303,50 @@ input {
 .TarifCard {
   background-color: rgba(0, 0, 0, 0.8); /* 0.3 = opacité 45% */
 }
+/*mode dark et white*/
+/* Light theme overrides */
+.light-theme {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+.light-theme .logo i {
+  color: #f59e0b;
+}
+.light-theme .nav-links a {
+  color: #0f172a;
+}
+.light-theme .nav-links a:hover,
+.light-theme .active {
+  color: #7c3aed;
+}
+.light-theme .hero-right,
+.light-theme .connexion-container,
+.light-theme .inscription-container,
+.light-theme .container,
+.light-theme .JeuxContainer,
+.light-theme .TarifsContainer,
+.light-theme .ProposContainer,
+.light-theme .ContactContainer {
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  backdrop-filter: none;
+}
+.light-theme input {
+  background: rgba(15, 23, 42, 0.03);
+  color: #0f172a;
+}
+.light-theme .ContactCard,
+.light-theme .TarifCard,
+.light-theme .JeuCard {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+}
+.light-theme .badge {
+  color: #6b21a8;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}

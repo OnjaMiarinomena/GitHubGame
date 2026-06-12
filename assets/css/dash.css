@@ -144,26 +144,11 @@ section {
   margin-top: 5px;
   text-align: center;
 }
-
-/*twosection*/
-.twosection {
-  display: flex;
-}
-.session_en_cours {
-  display: flex;
-}
-hr {
-  border: solid 0.5px white;
-}
-.machine1 {
-  display: flex;
-  justify-content: center;
-  justify-content: space-between;
-}
-.Arreter {
-  background-color: red;
-  border-radius: 5px;
-}
-.threesection {
-  display: flex;
+/*tableau*/
+caption {
+  color: #a4b3f7;
+  text-decoration: underline;
+  font-size: large;
+  font-weight: bolder;
+  margin: 2%;
 }

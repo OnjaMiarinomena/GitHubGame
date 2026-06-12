@@ -108,22 +108,3 @@ h2 {
   border: 1px solid rgba(255, 255, 255, 0.05);
 }
 /*les session en tableau*/
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-top: 30px;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  box-shadow: 0 0 20px rgba(189, 179, 213, 0.2);
-}
-table thead {
-  background: rgba(11, 19, 38, 0.6);
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  padding: 30px;
-  color: #a4b3f7;
-}
-table tbody {
-  background: rgba(11, 19, 38, 0.6);
-}
-table tbody tr {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
