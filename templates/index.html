@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <title>GameRoom Manager</title>
-
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
 
     <link
       rel="stylesheet"
@@ -87,11 +86,11 @@
         <hr />
         <div class="RegisterLogin flex justify-center gap-12 mt-6">
           <div class="LoginFormContainer" id="LoginFormContainer">
-            <form action="templates/gerant/dash.html">
+            <form action="/login" method="POST">
               <label for="email">Email</label> <br />
-              <input type="email" id="email" name="email" required /> <br />
+              <input type="email" id="email" name="email" required placeholder="Email" /> <br />
               <label for="password">Password</label> <br />
-              <input type="password" id="password" name="password" required />
+              <input type="password" id="password" name="password" required placeholder="Mots de passe"/>
               <br />
               <p>Mot de passe oublié ?</p>
               <button type="submit" class="connexion-btn w-[100%]">
@@ -104,13 +103,13 @@
             </form>
           </div>
           <div class="RegisterFormContainer" id="RegisterFormContainer">
-            <form action="templates/gerant/dash.html">
+            <form action="/signup" method="POST">
               <label for="">Nom</label> <br />
-              <input type="text" id="name" name="name" required /> <br />
+              <input type="text" id="name" name="username" required placeholder="Nom d'utilisateur"/> <br />
               <label for="email">Email</label> <br />
-              <input type="email" id="email" name="email" required /> <br />
+              <input type="email" id="email" name="email" required placeholder="Email"/> <br />
               <label for="password">Password</label> <br />
-              <input type="password" id="password" name="password" required />
+              <input type="password" id="password" name="password" required placeholder="Mots de passe"/>
               <br />
               <button type="submit" class="inscription-btn w-[100%] align">
                 S'inscrire
@@ -345,6 +344,6 @@
         &copy; 2023 GameRoom Manager. Tous droits réservés.
       </p>
     </footer>
-    <script src="script.js"></script>
+    <script src="assets/js/script.js"></script>
   </body>
 </html>

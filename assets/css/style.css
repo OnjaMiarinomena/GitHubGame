@@ -116,7 +116,7 @@ body {
 
 /*HERO*/
 .hero {
-  background-image: url("assets/image/fond1.png");
+  background-image: url("../image/fond1.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -260,7 +260,7 @@ input {
 }
 /* nos tarifs*/
 .TarifsContainer {
-  background-image: url("assets/image/fond2.png");
+  background-image: url("../image/fond2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -270,7 +270,7 @@ input {
 }
 /*contact*/
 .ContactContainer {
-  background-image: url("assets/image/fond2.png");
+  background-image: url("../image/fond2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -279,7 +279,7 @@ input {
 }
 /*jeuxcontainer*/
 .JeuxContainer {
-  background-image: url("assets/image/fond2.png");
+  background-image: url("../image/fond2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -289,7 +289,7 @@ input {
 }
 /* a propos*/
 .ProposContainer {
-  background-image: url("assets/image/fond2.png");
+  background-image: url("../image/fond2.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

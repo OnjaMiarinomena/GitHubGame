@@ -36,42 +36,50 @@
         </div>
         <ul class="menu">
           <li>
-            <a href="#"> <i class="fa-solid fa-house"></i> Tableau de bord</a>
+            <a href="{{ url_for('dashboard') }}">
+              <i class="fa-solid fa-house"></i> Tableau de bord</a
+            >
           </li>
           <li>
-            <a href="session.html">
+            <a href="{{ url_for('sessions') }}">
               <i class="fa-solid fa-clock"></i> Sessions en cours</a
             >
           </li>
           <li>
-            <a href="machine.html">
+            <a href="{{ url_for('machines') }}">
               <i class="fa-solid fa-gamepad"></i> Machines</a
             >
           </li>
           <li>
-            <a href="clients.html"><i class="fa-solid fa-users"></i>Clients</a>
+            <a href="{{ url_for('clients') }}"
+              ><i class="fa-solid fa-users"></i>Clients</a
+            >
           </li>
 
           <li>
-            <a href="paiement.html"
+            <a href="{{ url_for('paiements') }}"
               ><i class="fa-solid fa-wallet"></i>Paiement</a
             >
           </li>
           <li>
-            <a href="tarifs.html"> <i class="fa-solid fa-tags"></i>Tarifs</a>
+            <a href="{{ url_for('tarifs') }}">
+              <i class="fa-solid fa-tags"></i>Tarifs</a
+            >
           </li>
           <li>
-            <a href="report.html"
+            <a href="{{ url_for('reports') }}"
               ><i class="fa-solid fa-chart-line"></i>Rapports</a
             >
           </li>
         </ul>
-        <div class="flex p-5 my-5 border-t border-gray-300 justify-between">
+        <div
+          class="flex p-5 my-5 border-t border-gray-300 justify-between gap-4"
+        >
           <div>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              height="32"
-              width="32"
+              height="60"
+              width="60"
               viewBox="0 0 640 640"
             >
               <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -94,7 +102,7 @@
               Voici un aperçu de votre interface de aujourd'hui.
             </p>
           </div>
-          <div class="deconnect">
+          <div class="deconnect flex justify-between p-5">
             <p class="px-6">
               <i
                 class="fa-solid fa-bell px-4 py-4 bg-yellow-500 text-white rounded-full"
@@ -112,8 +120,8 @@
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    height="32"
-                    width="32"
+                    height="60"
+                    width="60"
                     viewBox="0 0 640 640"
                   >
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -125,7 +133,7 @@
                 </div>
                 <div>
                   <h3>Machines disponibles</h3>
-                  <p>8</p>
+                  <p id="affichageMachines" class="text-3xl font-bold">20</p>
                   <p text->Sur 20 machines</p>
                 </div>
               </div>
@@ -135,8 +143,8 @@
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    height="32"
-                    width="32"
+                    height="60"
+                    width="60"
                     viewBox="0 0 640 640"
                   >
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -148,7 +156,7 @@
                 </div>
                 <div>
                   <h3>Sessions en cours</h3>
-                  <p>5</p>
+                  <p id="affichageSession" class="text-3xl font-bold">0</p>
                   <p>Voir les session</p>
                 </div>
               </div>
@@ -158,8 +166,8 @@
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    height="32"
-                    width="32"
+                    height="60"
+                    width="60"
                     viewBox="0 0 640 640"
                   >
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -171,7 +179,7 @@
                 </div>
                 <div>
                   <h3>Clients présents</h3>
-                  <p>12</p>
+                  <p id="affichageClients" class="text-3xl font-bold">0</p>
                   <p>Voir les clients</p>
                 </div>
               </div>
@@ -181,8 +189,8 @@
                 <div>
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    height="32"
-                    width="32"
+                    height="60"
+                    width="60"
                     viewBox="0 0 640 640"
                   >
                     <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
@@ -194,7 +202,7 @@
                 </div>
                 <div>
                   <h3>Revenus du jour</h3>
-                  <p>1500 Ar</p>
+                  <p id="affichageRevenu" class="text-3xl font-bold">0 Ar</p>
                   <p>Voir les rapports</p>
                 </div>
               </div>
@@ -230,6 +238,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-green-500 text-white border rounded font-medium hover:bg-green-900 hover:scale-105 cursor-pointer"
+                      onclick="commencer()"
                     >
                       Commencer
                     </button>
@@ -237,6 +246,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-red-500 text-white border rounded font-medium hover:bg-red-900 hover:scale-105 cursor-pointer"
+                      onclick="arreter()"
                     >
                       Arreter
                     </button>
@@ -252,6 +262,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-green-500 text-white border rounded font-medium hover:bg-green-900 hover:scale-105 cursor-pointer"
+                      onclick="commencer()"
                     >
                       Commencer
                     </button>
@@ -259,6 +270,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-red-500 text-white border rounded font-medium hover:bg-red-900 hover:scale-105 cursor-pointer"
+                      onclick="arreter()"
                     >
                       Arreter
                     </button>
@@ -274,6 +286,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-green-500 text-white border rounded font-medium hover:bg-green-900 hover:scale-105 cursor-pointer"
+                      onclick="commencer()"
                     >
                       Commencer
                     </button>
@@ -281,6 +294,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-red-500 text-white border rounded font-medium hover:bg-red-900 hover:scale-105 cursor-pointer"
+                      onclick="arreter()"
                     >
                       Arreter
                     </button>
@@ -296,6 +310,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-green-500 text-white border rounded font-medium hover:bg-green-900 hover:scale-105 cursor-pointer"
+                      onclick="commencer()"
                     >
                       Commencer
                     </button>
@@ -303,6 +318,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-red-500 text-white border rounded font-medium hover:bg-red-900 hover:scale-105 cursor-pointer"
+                      onclick="arreter()"
                     >
                       Arreter
                     </button>
@@ -318,6 +334,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-green-500 text-white border rounded font-medium hover:bg-green-900 hover:scale-105 cursor-pointer"
+                      onclick="commencer()"
                     >
                       Commencer
                     </button>
@@ -325,6 +342,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-red-500 text-white border rounded font-medium hover:bg-red-900 hover:scale-105 cursor-pointer"
+                      onclick="arreter()"
                     >
                       Arreter
                     </button>
@@ -340,6 +358,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-green-500 text-white border rounded font-medium hover:bg-green-900 hover:scale-105 cursor-pointer"
+                      onclick="commencer()"
                     >
                       Commencer
                     </button>
@@ -347,6 +366,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-red-500 text-white border rounded font-medium hover:bg-red-900 hover:scale-105 cursor-pointer"
+                      onclick="arreter()"
                     >
                       Arreter
                     </button>
@@ -362,6 +382,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-green-500 text-white border rounded font-medium hover:bg-green-900 hover:scale-105 cursor-pointer"
+                      onclick="commencer()"
                     >
                       Commencer
                     </button>
@@ -369,6 +390,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-red-500 text-white border rounded font-medium hover:bg-red-900 hover:scale-105 cursor-pointer"
+                      onclick="arreter()"
                     >
                       Arreter
                     </button>
@@ -384,6 +406,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-green-500 text-white border rounded font-medium hover:bg-green-900 hover:scale-105 cursor-pointer"
+                      onclick="commencer()"
                     >
                       Commencer
                     </button>
@@ -391,6 +414,7 @@
                   <td class="px-4 py-2 border">
                     <button
                       class="p-2 bg-red-500 text-white border rounded font-medium hover:bg-red-900 hover:scale-105 cursor-pointer"
+                      onclick="arreter()"
                     >
                       Arreter
                     </button>
@@ -402,5 +426,6 @@
         </div>
       </div>
     </div>
+    <script src="../../assets/js/dash.js"></script>
   </body>
 </html>

@@ -37,6 +37,21 @@ h2 {
   backdrop-filter: blur(10px);
   box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
 }
+/*logo*/
+.logo {
+  margin-bottom: 40px;
+}
+.logo h2 {
+  color: #a4b3f7;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 30px;
+}
+.logo span {
+  color: #bb5cf6;
+  font-size: 27px;
+  margin-bottom: 30px;
+}
 .main {
   width: 80%;
   height: 100%;
@@ -63,6 +78,9 @@ h2 {
   color: white;
   box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
 }
+.menu a i {
+  margin-right: 11px;
+}
 /*dashboard*/
 .topbar {
   background: rgba(11, 19, 38, 0.6);
@@ -74,6 +92,11 @@ h2 {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+.ending-day {
+  background: linear-gradient(120deg, #424659, #131e4b, #444c60);
+  padding: 10px 20px;
+  border-radius: 7px;
 }
 
 /*content1*/

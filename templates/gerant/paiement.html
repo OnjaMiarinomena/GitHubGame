@@ -14,59 +14,99 @@
   <body>
     <div class="parent">
       <div class="sidebar">
-        <div class="logo">
-          <h2>GameRoom</h2>
-          <span
-            >Manager
-            <i class="fa-solid fa-gamepad text-yellow-500 font-3xl"></i>
+        <div class="logo flex items-center gap-4">
+          <span>
+            <h2>GameRoom</h2>
+            <h3>Manager</h3>
+          </span>
+          <span>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="100"
+              width="100"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                fill="rgb(255, 212, 59)"
+                d="M603 436.3C591.7 450.5 564.2 460.6 564.2 460.6L359.1 534.2L359.1 479.9L510 426.1C527.1 420 529.8 411.3 515.8 406.7C501.9 402.1 476.7 403.4 459.6 409.6L359.1 445.1L359.1 388.7C382.3 380.9 406.2 375.1 434.8 371.9C475.7 367.4 525.7 372.5 565 387.4C609.2 401.4 614.2 422.1 603 436.3zM378.6 343.8L378.6 204.8C378.6 188.5 375.6 173.5 360.3 169.2C348.6 165.4 341.3 176.3 341.3 192.6L341.3 540.5L247.5 510.7L247.5 96C287.4 103.4 345.5 120.9 376.7 131.4C456.2 158.7 483.1 192.7 483.1 269.2C483.1 343.7 437.1 372 378.6 343.8zM75.3 474.2C29.9 461.4 22.3 434.7 43 419.4C62.1 405.2 94.7 394.5 94.7 394.5L229.2 346.7L229.2 401.2L132.4 435.8C115.3 441.9 112.7 450.6 126.6 455.2C140.5 459.8 165.7 458.5 182.8 452.3L229.2 435.4L229.2 484.2C177.6 493.5 127.8 491.5 75.3 474.2z"
+              />
+            </svg>
           </span>
         </div>
         <ul class="menu">
           <li>
-            <a href="dash.html">
+            <a href="{{ url_for('dashboard') }}">
               <i class="fa-solid fa-house"></i> Tableau de bord</a
             >
           </li>
           <li>
-            <a href="session.html">
+            <a href="{{ url_for('sessions') }}">
               <i class="fa-solid fa-clock"></i> Sessions en cours</a
             >
           </li>
           <li>
-            <a href="machine.html">
+            <a href="{{ url_for('machines') }}">
               <i class="fa-solid fa-gamepad"></i> Machines</a
             >
           </li>
           <li>
-            <a href="clients.html"><i class="fa-solid fa-users"></i>Clients</a>
+            <a href="{{ url_for('clients') }}"
+              ><i class="fa-solid fa-users"></i>Clients</a
+            >
           </li>
 
           <li>
-            <a href="paiement.html"
+            <a href="{{ url_for('paiements') }}"
               ><i class="fa-solid fa-wallet"></i>Paiement</a
             >
           </li>
           <li>
-            <a href="tarifs.html"> <i class="fa-solid fa-tags"></i>Tarifs</a>
+            <a href="{{ url_for('tarifs') }}">
+              <i class="fa-solid fa-tags"></i>Tarifs</a
+            >
           </li>
           <li>
-            <a href="report.html"
+            <a href="{{ url_for('reports') }}"
               ><i class="fa-solid fa-chart-line"></i>Rapports</a
             >
           </li>
         </ul>
+        <div
+          class="flex p-5 my-5 border-t border-gray-300 justify-between gap-4"
+        >
+          <div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              height="60"
+              width="60"
+              viewBox="0 0 640 640"
+            >
+              <!--!Font Awesome Free v7.2.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2026 Fonticons, Inc.-->
+              <path
+                fill="rgb(227, 0, 255)"
+                d="M568.4 196.5C563.9 207 550 206.3 543.5 196.9C515.7 156.9 477.4 124.7 432.5 104.3C422.1 99.6 418.8 86 428.4 79.7C443.4 69.8 461.4 64 480.7 64C533.3 64 575.9 106.6 575.9 159.2C575.9 172.4 573.2 185 568.3 196.5zM96.5 196.9C90 206.3 76 207 71.6 196.5C66.7 185 64 172.4 64 159.2C64 106.6 106.6 64 159.2 64C178.5 64 196.5 69.8 211.5 79.7C221.1 86 217.8 99.6 207.4 104.3C162.6 124.7 124.3 156.9 96.4 196.9zM454.2 531.4C416.8 559.4 370.3 576 320 576C269.7 576 223.2 559.4 185.9 531.4L150.6 566.6C138.1 579.1 117.8 579.1 105.3 566.6C92.8 554.1 92.8 533.8 105.3 521.3L140.5 486.1C112.6 448.8 96 402.3 96 352C96 228.3 196.3 128 320 128C443.7 128 544 228.3 544 352C544 402.3 527.4 448.8 499.4 486.2L534.6 521.4C547.1 533.9 547.1 554.2 534.6 566.7C522.1 579.2 501.8 579.2 489.3 566.7L454.1 531.5zM344 248C344 234.7 333.3 224 320 224C306.7 224 296 234.7 296 248L296 352C296 358.4 298.5 364.5 303 369L359 425C368.4 434.4 383.6 434.4 392.9 425C402.2 415.6 402.3 400.4 392.9 391.1L343.9 342.1L343.9 248z"
+              />
+            </svg>
+          </div>
+          <div>
+            <p class="text-2xl">Heure actuelle: 14:30</p>
+          </div>
+        </div>
       </div>
       <div class="main">
         <div class="topbar">
           <div>
-            <h2>Bonjour Gerant !</h2>
+            <h2 class="text-2xl font-bold">Bonjour Gerant !</h2>
             <p class="Bonjour-gerant">
               Voici un aperçu de votre interface de aujourd'hui.
             </p>
           </div>
-          <div class="deconnect flex gap-4">
-            <p>
-              <i class="fa-solid fa-bell border bg-black p-1 rounded-full"></i>
+          <div class="deconnect flex justify-between p-5">
+            <p class="px-6">
+              <i
+                class="fa-solid fa-bell px-4 py-4 bg-yellow-500 text-white rounded-full"
+              ></i>
             </p>
             <p class="ending-day">
               Fin de la journée <i class="fa-solid fa-sign-out-alt"></i>
@@ -78,10 +118,10 @@
         <main>
           <section>
             <div>
-              <h3 class="text-xl text-purple-300 font-bold m-2">
+              <h3 class="text-xl text-purple-300 font-bold m-2 text-center">
                 Gestion de paiment
               </h3>
-              <p class="m-6">
+              <p class="m-6 text-center">
                 Enregistrez les paiements des clients et consultez les
                 transactions récentes.
               </p>
