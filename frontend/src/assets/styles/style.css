@@ -1,0 +1,465 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "arial", helvetica, sans-serif;
+}
+
+body {
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #fff;
+}
+
+/*overplay*/
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background:
+    radial-gradient(circle at top right, rgba(139, 92, 246, 0.25)),
+    transparent 40%;
+  z-index: -1;
+}
+
+/* navbar*/
+.navbar {
+  position: fixed;
+  width: 100%;
+  margin: 20px auto;
+  padding: 18px 35px;
+  background: rgba(5, 8, 22, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  border-radius: 22px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+}
+
+/*logo*/
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.logo i {
+  font-size: 45px;
+  color: #8b5cf6;
+}
+.logo h2 {
+  font-size: 32px;
+}
+.logo span {
+  color: #8b5cf6;
+  font-weight: bold;
+  letter-spacing: 2px;
+}
+
+/*LINKS*/
+.nav-links {
+  display: flex;
+  gap: 40px;
+  list-style: none;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #e2e8f0;
+  transition: 0.3s;
+}
+.nav-links a:hover,
+.active {
+  color: #8b5cf6;
+}
+
+/*BOUTTON*/
+
+.connexion-btn {
+  padding: 15px 28px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+.connexion-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+.inscription-btn {
+  padding: 15px 28px;
+  border: none;
+  border-radius: 15px;
+  background: linear-gradient(90deg, #6ff495, #05580f);
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  transition: 0.3s;
+}
+.inscription-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+}
+
+/*HERO*/
+.hero {
+  background-image: url("../image/fond1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  overflow-x: hidden;
+  color: #fff;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.hero-left {
+  width: 700px;
+}
+.badge {
+  display: inline-block;
+  padding: 12px 25px;
+  border-radius: 50px;
+  border: 1px solid rgba(139, 92, 246, 0.6);
+  color: #c026d3;
+  margin-bottom: 20px;
+}
+.hero h1 {
+  font-size: 75px;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+.hero h1 span {
+  color: #8b5cf6;
+}
+.hero p {
+  font-size: 22px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 40px;
+}
+
+.RegisterLogin {
+  width: 100%;
+  justify-content: center;
+}
+.hero-right {
+  width: 50%;
+  background: rgba(5, 8, 22, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+.LoginFormContainer,
+.RegisterFormContainer {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  max-width: 420px;
+  margin: 0 auto;
+}
+
+/*BUTTON*/
+.hero-bouttons {
+  display: flex;
+  gap: 30px;
+}
+.start-btn,
+.demo-btn {
+  padding: 18px 35px;
+  border: none;
+  border-radius: 15px;
+  font-size: 18px;
+  cursor: pointer;
+}
+.start-btn {
+  background: linear-gradient(90deg, #7c3aed, #a855f7);
+  color: #fff;
+  transition: 0.3s;
+}
+.start-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+/*connexion-container*/
+.connexion-container,
+.inscription-container {
+  background: rgba(5, 8, 22, 0.5);
+  padding: 30px;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 300px;
+}
+.connexion-container label,
+.inscription-container label {
+  font-size: 16px;
+  display: block;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.container {
+  background: rgba(5, 8, 22, 0.1);
+  padding: 4%;
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  width: 50%;
+}
+input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.LoginFormContainer,
+.RegisterFormContainer {
+  display: none;
+  flex-direction: column;
+  gap: 20px;
+}
+/*jeux*/
+.JeuxContainer {
+  background: rgba(5, 8, 22, 0.5);
+
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+/*a propos*/
+.ProposContainer {
+  background: rgba(5, 8, 22, 0.5);
+  height: 50vh;
+  padding-bottom: 4%;
+
+  padding-top: 4%;
+  align-items: center;
+  margin-bottom: 40px;
+}
+/* nos tarifs*/
+.TarifsContainer {
+  background-image: url("../image/fond2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+/*contact*/
+.ContactContainer {
+  background-image: url("../image/fond2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+/*jeuxcontainer*/
+.JeuxContainer {
+  background-image: url("../image/fond2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+/* a propos*/
+.ProposContainer {
+  background-image: url("../image/fond2.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: 4%;
+  padding-top: 4%;
+}
+
+.ContactCard {
+  background-color: rgba(0, 0, 0, 0.8); /* 0.3 = opacité 45% */
+}
+.TarifCard {
+  background-color: rgba(0, 0, 0, 0.8); /* 0.3 = opacité 45% */
+}
+/*mode dark et white*/
+/* Light theme overrides */
+.light-theme {
+  background-color: #f8fafc;
+  color: #0f172a;
+}
+.light-theme .navbar {
+  background: rgba(255, 255, 255, 0.85);
+  border: 1px solid rgba(15, 23, 42, 0.06);
+}
+.light-theme .logo i {
+  color: #f59e0b;
+}
+.light-theme .nav-links a {
+  color: #0f172a;
+}
+.light-theme .nav-links a:hover,
+.light-theme .active {
+  color: #7c3aed;
+}
+.light-theme .hero-right,
+.light-theme .connexion-container,
+.light-theme .inscription-container,
+.light-theme .container,
+.light-theme .JeuxContainer,
+.light-theme .TarifsContainer,
+.light-theme .ProposContainer,
+.light-theme .ContactContainer {
+  background: rgba(255, 255, 255, 0.9);
+  color: #0f172a;
+  border: 1px solid rgba(15, 23, 42, 0.04);
+  backdrop-filter: none;
+}
+.light-theme input {
+  background: rgba(15, 23, 42, 0.03);
+  color: #0f172a;
+}
+.light-theme .ContactCard,
+.light-theme .TarifCard,
+.light-theme .JeuCard {
+  background-color: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+}
+.light-theme .badge {
+  color: #6b21a8;
+  border: 1px solid rgba(124, 58, 237, 0.25);
+}
+
+/* ==========================================
+   RESPONSIVE
+   ========================================== */
+
+/* --- Mise en page du tableau de bord (App.jsx : app-shell / sidebar / app-content / topbar) --- */
+@media (max-width: 900px) {
+  .app-shell {
+    flex-direction: column !important;
+  }
+  .sidebar {
+    width: 100% !important;
+    min-width: 0 !important;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+    justify-content: space-between !important;
+    padding: 16px !important;
+  }
+  .sidebar .menu {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    width: 100%;
+  }
+  .sidebar .menu li {
+    flex: 1 1 45%;
+  }
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start !important;
+    gap: 12px;
+    height: auto !important;
+    text-align: left;
+  }
+}
+
+@media (max-width: 600px) {
+  .sidebar .menu li {
+    flex: 1 1 100%;
+  }
+  .topbar h2 {
+    font-size: 1.3rem;
+  }
+}
+
+/* --- Landing page (navbar / hero / formulaires) --- */
+@media (max-width: 1100px) {
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 140px 20px 60px;
+    gap: 40px;
+  }
+  .hero-left {
+    width: 100%;
+  }
+  .hero-right {
+    width: 100%;
+    max-width: 480px;
+  }
+  .hero h1 {
+    font-size: 48px;
+  }
+  .hero p {
+    font-size: 18px;
+  }
+  .hero-bouttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  .container {
+    width: 90%;
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 15px 20px;
+  }
+  .nav-links {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+  .logo h2 {
+    font-size: 24px;
+  }
+  .hero h1 {
+    font-size: 36px;
+  }
+  .connexion-container,
+  .inscription-container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-bouttons {
+    flex-direction: column;
+    width: 100%;
+  }
+  .start-btn,
+  .demo-btn,
+  .connexion-btn,
+  .inscription-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}

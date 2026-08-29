@@ -1,0 +1,47 @@
+/* Cartes de statistiques */
+.articlefort {
+  background: rgba(11, 19, 38, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
+  padding: 20px;
+}
+
+.articlefort h3 {
+  color: #a4b3f7;
+  margin-bottom: 20px;
+}
+
+/* Barre d'actions (recherche et boutons) */
+.sectionall {
+  background: rgba(11, 19, 38, 0.6);
+  padding: 20px;
+  border-radius: 12px;
+}
+
+/* Style de la table */
+.machine-table-container {
+  overflow-x: auto;
+}
+
+.machine-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.machine-table thead {
+  background: rgba(139, 92, 246, 0.4);
+  color: #cbd5e1;
+}
+
+.machine-table th,
+.machine-table td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.machine-table tbody tr:hover {
+  background: rgba(139, 92, 246, 0.2);
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.2);
+  transition: 0.3s;
+}

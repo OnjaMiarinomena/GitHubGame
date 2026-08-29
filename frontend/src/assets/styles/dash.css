@@ -1,0 +1,101 @@
+.Bonjour-gerant {
+  padding-top: 10px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.topbar {
+  background: rgba(11, 19, 38, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+}
+
+.deconnect {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  gap: 1rem;
+}
+
+.ending-day {
+  background: linear-gradient(120deg, #424659, #131e4b, #444c60);
+  padding: 10px 20px;
+  border-radius: 7px;
+}
+
+.principal {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.forsection {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.forsection section {
+  flex: 1 1 220px;
+  min-width: 240px;
+}
+
+section {
+  background: rgba(11, 19, 38, 0.6);
+  border-radius: 12px;
+  box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
+  padding: 30px;
+  margin: 0;
+}
+
+caption {
+  color: #a4b3f7;
+  text-decoration: underline;
+  font-size: large;
+  font-weight: bolder;
+  margin: 2%;
+}
+
+@media (max-width: 960px) {
+  .topbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .deconnect {
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 720px) {
+  .forsection {
+    flex-direction: column;
+  }
+  section {
+    padding: 20px;
+  }
+  .principal {
+    gap: 1rem;
+  }
+  /* Tableau des sessions : scroll horizontal plutôt que débordement */
+  .principal table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 480px) {
+  caption {
+    font-size: medium;
+  }
+}

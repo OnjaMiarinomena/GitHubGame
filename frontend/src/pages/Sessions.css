@@ -1,0 +1,136 @@
+body {
+  background: linear-gradient(120deg, #050816, #131e4b, #11151e);
+  color: white;
+}
+
+.parent {
+  display: flex;
+  min-height: 100vh;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 20%;
+  background-color: rgba(11, 19, 38, 0.6);
+  border-right: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
+}
+
+.logo {
+  margin-bottom: 40px;
+}
+
+.logo h2 {
+  color: #a4b3f7;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #bb5cf6;
+  font-size: 27px;
+}
+
+.main {
+  width: 80%;
+}
+
+.menu li a {
+  display: block;
+  text-decoration: none;
+  font-weight: bold;
+  color: #cbd5e1;
+  padding: 15px 18px;
+  border-radius: 12px;
+  transition: 0.5s;
+}
+
+.menu li a:hover {
+  background: rgba(139, 92, 246, 0.4);
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 0 15px rgba(139, 92, 246, 0.4);
+}
+
+.menu a i {
+  margin-right: 11px;
+}
+
+.menu li a.active {
+  background: linear-gradient(90deg, #8b5cf6, #6366f1);
+  color: white;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+}
+
+/* Topbar */
+.topbar {
+  background: rgba(11, 19, 38, 0.6);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 30px rgba(189, 179, 213, 0.2);
+  width: 100%;
+  height: 100px;
+  padding: 20px 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Bonjour-gerant {
+  padding-top: 5px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.ending-day {
+  background: linear-gradient(120deg, #424659, #131e4b, #444c60);
+  padding: 10px 20px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+
+/* Stats */
+.stats {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 30px;
+}
+
+.card {
+  background: #0f172a;
+  padding: 25px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.card p {
+  color: #94a3b8;
+}
+
+/* Table Section */
+.session-info {
+  padding: 0 30px 30px 30px;
+}
+
+.session-info h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #a4b3f7;
+}
+
+.session-info p {
+  color: #94a3b8;
+  margin-bottom: 20px;
+}
